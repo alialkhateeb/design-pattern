@@ -1,4 +1,4 @@
-package com.design.pattern.LSP;
+package com.design.pattern.SOLID.LSP;
 
 public class Main {
     public static void main(String[] args) {

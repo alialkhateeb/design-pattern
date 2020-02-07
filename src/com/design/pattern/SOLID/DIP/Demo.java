@@ -1,4 +1,4 @@
-package com.design.pattern.DIP;
+package com.design.pattern.SOLID.DIP;
 
 //DIP
 // A. High-level modules should not depend on low-level modules.

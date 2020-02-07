@@ -1,4 +1,4 @@
-package com.design.pattern.ISP;
+package com.design.pattern.SOLID.ISP;
 
 
 

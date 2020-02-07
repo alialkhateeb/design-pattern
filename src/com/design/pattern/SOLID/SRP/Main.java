@@ -1,4 +1,4 @@
-package com.design.pattern.SRP;
+package com.design.pattern.SOLID.SRP;
 
 public class Main {
 

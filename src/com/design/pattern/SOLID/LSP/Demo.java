@@ -1,4 +1,4 @@
-package com.design.pattern.LSP;
+package com.design.pattern.SOLID.LSP;
 
 
 /**

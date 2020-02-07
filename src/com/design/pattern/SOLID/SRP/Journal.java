@@ -1,4 +1,4 @@
-package com.design.pattern.SRP;
+package com.design.pattern.SOLID.SRP;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
