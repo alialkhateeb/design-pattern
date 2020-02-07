@@ -71,6 +71,8 @@ class HtmlBuilder {
     }
 
 
+    // the idea here is to return the object itself of the class and use "return this" which allow us to return the object of the same class and append it to another class of itself
+
     public HtmlBuilder addChildFluent(String childName, String childText) {
         HtmlElement e = new HtmlElement(childName, childText);
         root.elements.add(e);
@@ -156,7 +158,7 @@ public class Demo {
         builder.addChild("li", "world");
         System.out.println(builder);
 
-        // fluent builder
+        // fluent builder using fluent interface concept
         builder.clear();
         builder.addChildFluent("li", "hello")
                 .addChildFluent("li", "world");
