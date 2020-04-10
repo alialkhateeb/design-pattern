@@ -1,0 +1,12 @@
+Prototype - When it's easier to copy an existing object to fully initialize a new one.
+- A partially or fully initialized object that you copy (clone) and make use of ot
+
+Motivation:
+- Complicated objects (e.g. car) aren't design from scratch
+    They reiterate existing design making them better
+- An existing (partially or fully constructed) design is a Prototype
+    You have already design/define something very complicated type, and then you want to make variation on it.
+- In order to make variation, we make a copy (clone) the prototype and customize it
+    Require 'deep copy' support. It's a situation where you're copying not just the object but copying all your object reference
+    by making new objects which replicate the state those reference
+- We make the cloning convenient (e.g. via a Factory)

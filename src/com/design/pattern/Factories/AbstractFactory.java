@@ -1,7 +1,6 @@
 package com.design.pattern.Factories;
 
 
-import org.javatuples.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +50,7 @@ class CoffeeFactory implements HotDrinkFactory{
 }
 
 class HotDrinkMachine{
-    private List<Pair<String, HotDrinkFactory>> namedFactories = new ArrayList<>();
+//    private List<Pair<String, HotDrinkFactory>> namedFactories = new ArrayList<>();
 
     public HotDrinkMachine(){
 
