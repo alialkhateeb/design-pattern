@@ -1,0 +1,22 @@
+Singleton - design pattern everyone loves to hate ... but it's really that bad?
+
+Motivation:
+- for some components it only makes sense to have one instance in the system
+        $ Database repository - suppose that you have an object which access database maybe it loads up the database
+        in its constructor into memory and then gives out information about the contents of that database. Once it's loaded up
+        you don't really want more than one instance of it because there is no point.
+        $ Object factory - let's suppose you have a separate factory component which actully just creates some components,
+        do you really want more than one instance of it? because factory isn't suppose to have any state. we are looking at
+        a situation where a constructor call for a particular object is expensive, and you really want to have that constructor call being
+        done once and then the object will existed only once in the code and become available to others to use. Only
+        one object will existed, and prevent other clients from making other copies of it.
+
+- E.g. the constructor call is expensive
+        $ we only do it once
+        $ we provide everyone with the same instance
+
+- Want to prevent anyone creating additional copies
+- Need to take care of lazy instantiation and thread safety
+        $ lazy/thread safety: to prevent the constructor from being executed twice and cause race condition
+
+Singleton: a component which is instantiated only once, and prevent the idea that it can be created more than once.
