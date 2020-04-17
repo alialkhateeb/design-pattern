@@ -1,0 +1,19 @@
+Bridge - Connecting components together through abstractions
+
+Motivation:
+- prevents a 'Cartesian Product' complexity explosion
+        For example: Lets take this scenario
+            + Base class ThreadScheduler
+            + Can be preemptive or cooperative
+            + Can run on Windows or Unix
+            + End up with a 2x2 scenario: WindowsPTS, UnixPTS, WindowsCTS, UnixCTS classes
+- Bridge pattern avoids the entity explosion.
+
+Bridge = A mechanism that decouples an interface (hierarchy) from implementation (hierarchy)
+        In this case you can have some inheritance/some aggregation
+
+
+Summary:
+        - Decouple abstraction from implementation
+        - Both can exist as hierarchies
+        - A stronger form of encapsulation
