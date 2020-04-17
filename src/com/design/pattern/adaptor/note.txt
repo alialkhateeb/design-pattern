@@ -1,0 +1,18 @@
+Adapter - Getting the interface you want from the interface you have
+
+Adapter: A construct which adapts an existing interface X to conform to the required interface Y
+         what does this mean is that you are getting interface X from some system, but some other system require
+         interface Y. So what you have to do is to connect one to another and write extra code to make it possible
+
+The concept of an adapter is similar to the plugin adapter which used to connect to different plugin.
+        Some plugin require different specification based on the given requirements, you can consider the interface as a
+        requirement to simplify the concept.
+
+
+
+____
+Summary:
+- Implementing an Adapter is easy
+- Determine the API you have and the API you need
+- Create a component which aggregates (has a reference to what ever being adapted or you can even instantiated) the adaptee
+- Intermediate representations can pile up: using caching and other optimizations
