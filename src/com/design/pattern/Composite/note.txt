@@ -1,0 +1,21 @@
+Composite - Treating individual and aggregate objects uniformly (in the same fashion)
+
+Motivation:
+            - Objects use other objects' fields/methods through inheritance and composition-(objects contain other objects)
+            -  Composition lets us make compound objects/ group objects together and have them under the same umbrella
+                * e.g. a mathematical expression composed of simple sub-expressions; or
+                * A shape of group made of several different shapes (which are all grouped together)
+            - Composite design pattern is used to treat both single (scalar) and composite objects uniformly
+                * i.e. Foo and List<Foo> have common APIs
+
+Composite: A mechanism for treating individual (scalar) objects and compositions of objects in a uniform matter.
+
+___
+
+Summary:
+        - Objects can use other objects via inheritance/composition
+        - Some composed and singular objects need similar/identical behaviors. (need to provide similar API, which is
+                                                                                typically used through of interfaces)
+        - Composite design pattern lets us treat both types of objects uniformly
+        - Java supports container iteration with the Iterable<T> interface
+        - A single object can masquerade/disguise as a collection by returning a single-element collection containing only 'this'
