@@ -1,0 +1,22 @@
+Observer - I am watching you!
+
+Motivation:
+            - we need to be informed when certain things happen
+                * you have an object and you want to be informed when object's field changes
+                * when an object does something
+                * some external event occurs outside your system
+            - We want to listen to events and notified when they occur
+            - (old fashion of java approach) typical pattern involves addXxxListener()
+                * that's where you add the listener and specify that behavior that you want to happen whenever the actual event occurs
+            - Java now has functional objects, if you want some action to occur you can wrap it with
+                * Supplier<T>. Consumer<T>, Function<T>, you can store them in an array and fire them whenever necessary
+
+
+Observer - An observer is an object that wishes to be informed about events happening in the system. The entity generating
+            the events is an observable.
+
+
+Summary: - Observer is an intrusive approach: an observable must provide an event to subscribe to
+         - Special care must be taken to prevent issues in multithreaded scenarios
+         - there's no dedicated interfaces that uses Observer/Observable bc it was deprecated but
+         - Rx uses Observer<T>/Observable<T> but it might not be the same
