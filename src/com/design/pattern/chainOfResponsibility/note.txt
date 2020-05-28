@@ -1,0 +1,16 @@
+Chain of Responsibility - Sequence of processing an event one after another
+
+Let's say that the employee design a system that caused a failer, in case of responsibility, who will be responsible?
+    - Employee.. but what if the manager knew about it
+    - Manager.. but what if the CEO knew about it
+    - CEO..
+    This is an example of what the chain would look like.
+
+Another example, You click a graphical element on a form
+    - Button handles it, stops further processing
+    - underlying group box
+    - underlying window
+
+
+Chain of Responsibility - A chain of components who all get a chance to process a command/query, optionally having
+                          default processing implementation and an ability to terminate the process chain.

@@ -1,0 +1,18 @@
+Null Object - a behavioral design pattern with no behaviors
+
+Motivation:
+            - When component A uses component B, it typically assumes that B is non-null, bc if it's null how do you use it?
+                * if you're using DI, you inject B not some Option<B> type
+                * You do not check for null on every call
+            - there is no option of telling A not to use instance of B
+                * if A uses B that uses effectively hardcoded (its use is hardcoded)
+            - Sometimes we don't B to be there OR we don't want any operations of B to be actually invoked
+            - Thus, we build a no-op, non-functioning inheritor of B (or some interface that B implements) and pass it into A
+
+Null Object = a no-op object that conforms to the required interface satisfying a dependency requirement of some other object.
+
+What is
+How
+when
+why
+
