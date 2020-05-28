@@ -57,11 +57,70 @@ class CreatureModifier{
      * method and that's exactly what're going to do.
      */
     public void handled(){
-
+        if (next != null) next.handled();
     }
 }
 
+class DoubleAttackModifier extends CreatureModifier{
 
+    public DoubleAttackModifier(Creature creature) {
+        super(creature);
+    }
 
+    @Override
+    public void handled() {
+        System.out.println("Doubling " + creature.name + "'s attack");
+        creature.attack *= 2;
+        super.handled();
+    }
+}
+
+class IncreaseDefenseModifier  extends CreatureModifier{
+
+    public IncreaseDefenseModifier(Creature creature) {
+        super(creature);
+    }
+
+    @Override
+    public void handled() {
+        System.out.println("Increase " + creature.name + "'s defense");
+        creature.defense += 3;
+        super.handled();
+    }
+}
+
+class NoBounceCurs extends CreatureModifier{
+
+    public NoBounceCurs(Creature creature) {
+        super(creature);
+    }
+
+    @Override
+    public void handled() {
+        System.out.println("You got cursed! No Bounce");
+    }
+}
 public class ChainDemo {
+
+    public static void main(String[] args) {
+        Creature goblin = new Creature("Goblin", 2, 2);
+
+        System.out.println(goblin);
+
+        CreatureModifier root = new CreatureModifier(goblin);
+
+//        System.out.println("you got coursed!!");
+//        root.add(new NoBounceCurs(goblin));
+
+
+        System.out.println("double goblin attack..");
+        root.add(new DoubleAttackModifier(goblin));
+        System.out.println("increase goblin defense..");
+        root.add(new IncreaseDefenseModifier(goblin));
+
+        //will handle traversing through the entire chain to reverse every single modifier and apply it.
+        root.handled();
+        System.out.println(goblin);
+
+    }
 }

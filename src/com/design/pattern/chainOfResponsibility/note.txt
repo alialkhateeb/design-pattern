@@ -14,3 +14,17 @@ Another example, You click a graphical element on a form
 
 Chain of Responsibility - A chain of components who all get a chance to process a command/query, optionally having
                           default processing implementation and an ability to terminate the process chain.
+
+
+
+__________________________________________________________________________________
+Command Query Separation: when we  operate on objects we separate all of the invocation into two different concepts
+                        which are called query and command.
+- Command: is something that you send when you're asking for an action or change.
+- Query: asking for information w/o necessarily changing anything. (You're simply asking the system to give you a
+         particular value.
+- CQS: having separate means of sending commands and queries to. So instead of accessing directly a field of particular
+       class, what you do is send a message either you send it a message telling it to please give me the contents of
+       the fields OR send a command which states please set the field  to this particular value.
+
+____________________________________________________________________________________

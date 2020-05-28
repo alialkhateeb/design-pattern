@@ -23,5 +23,6 @@
     <orderEntry type="library" name="com.google.inject:guice:4.2.3" level="project" />
     <orderEntry type="library" name="org.springframework.statemachine:spring-statemachine-core:2.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="org.springframework.boot:spring-boot-starter-web:2.2.6.RELEASE" level="project" />
+    <orderEntry type="library" name="org.javatuples:javatuples:1.2" level="project" />
   </component>
 </module>
