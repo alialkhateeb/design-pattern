@@ -1,0 +1,32 @@
+Command - request wrapper under an object as a command and passed to invoker object
+
+Motivation:
+            - ordinary java statements changed (nobody save the previous value)
+                * you cannot undo a fields assignment (nobody saved previous value)
+                * cannot directly serialize a sequence of actions (series of fields assignments/ series of method calls)
+            - What you want is an object that represents an operations
+                * X should chage its field Y to value Z
+                * use an object to represent the idea that X should now call its member method (X should call w())
+            - Uses: GUI commands, multi-level undo/redo, macro recording ...etc
+                * e.g. you might have a a menu and a toolbar which both allow you to save a file, so in both cases the
+                       file save operation will be wrapped in a command that will be sent to some sort of command processor
+
+            - What command allow you to do is to have multi-level undo and redo functionality because essentially you're
+              recording every single step with a command and those commands can be stored somewhere and can be played back
+
+Command - Object which represents an instruction to perform a particular action. Contains all the information necessary
+            for the action to be taken.
+
+When do we use the pattern:
+        - You need a command to have a life span independent of the original request. You can execute requests at different times
+        - command execution that can store and reverse back its effects.
+        - need to structure a system around high-level operations built on primitive operations
+\\\\\\\\\\\\\\\\\\\\
+
+Summary:
+        - Encapsulate all details of an operation in separate object, later you can serialize it/store it in memory/disk
+        - Define instruction for applying the command (you need sort of command processor which is able to take this
+            command and optionally you can define additional instructions)
+        - Optionally you can define instructions for undoing the commands
+        - You can also create a compsite commands/marcos where you would have a set of commands to package them into one
+            single command
